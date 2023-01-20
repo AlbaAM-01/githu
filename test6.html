@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <script src="script.js"></script>
+    <style>
+        #email,fieldset:nth-of-type(1)>label:nth-of-type(2){
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changetext();" data-click="0" id="btn">Texto inicial</button>
+
+    <form action="">
+        <fieldset>
+            <legend>
+                Email subscription
+            </legend>
+            <input type="checkbox" name="subscribe" id="subscribe" onclick="showemail();">
+            <label for="subscribe">Yes, i would like to subscribe</label>
+            <br>
+            <input type="email" name="email" id="email">
+            <label for="email">Email address:</label>
+        </fieldset>
+        <fieldset>
+            <legend>Select your favourite berry</legend>
+            <input type="radio" name="favcherry" id="strawberry" value="strawberry">
+            <label for="strawberry">strawberry</label>
+            <input type="radio" name="favcherry" id="blueberry" value="blueberry">
+            <label for="blueberry">blueberry</label>
+            <input type="radio" name="favcherry" id="blackberry" value="blackberry">
+            <label for="blackberry">blackberry</label>
+        </fieldset>
+        <button onclick="checkselection();">Check seleection</button>
+        <fieldset>
+            <input onblur="checkNumber();" type="text" name="number" id="number">
+            <label for="number">Introduce un numero</label>
+        </fieldset>
+    </form>
+    <p id="warning">Hello Word</p>
+</body>
+</html>
